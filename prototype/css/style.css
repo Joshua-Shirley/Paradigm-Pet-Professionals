@@ -1,0 +1,138 @@
+:root {
+    --font-size: 18px;
+    --line-height: 32px;
+    --xs: 0;
+    --sm: 576px;
+    --lg: 992px;
+    --color: black;
+    --border: black;
+    --link: #003b6d;
+    --link-bg: whitesmoke;
+    --link-active: #003b6d;
+    --link-active-bg: #6699cc;
+    --link-visited: #003b6d;
+    --link-focus: #003b6d;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+header,
+section,
+footer {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+header {
+    border-bottom: 2px solid var(--border);
+}
+
+header div.top {
+    padding: 1rem 1.5rem .25rem 1.5rem;
+    background-color: whitesmoke;
+}
+
+header div.top a.logo img {
+    max-height: 46px;
+    padding: 6px 0;
+    margin: 0 auto;
+}
+
+header div.top a.menuButton {
+    float: right;
+}
+
+header div.top a:after {
+    content: "";
+    clear: both;
+}
+
+header div.top a.menuButton:hover img {
+    filter: invert(65%) sepia(16%) saturate(1321%) hue-rotate(172deg) brightness(87%) contrast(80%);
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    display: block;
+    --background: var(--link-bg);
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: .5rem 1.5rem;
+    color: var(--link);
+    --background-color: var(--link-bg);
+    font-weight: 400;
+    font-size: 1.35rem;
+}
+
+nav a:hover,
+nav a:active {
+    background-color: #6699cc;
+}
+
+.hamburger {
+    max-height: 50px;
+}
+
+nav img.icon {
+    max-height: 24px;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: .5em;
+}
+
+nav.mainMenu {
+    display: block;
+}
+
+nav.mainMenu ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+nav.mainMenu a {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+main {
+    padding: 1.5rem;
+}
+
+@media screen and (max-width: 475px) {
+    body {
+        background-color: olive;
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container,
+    main {
+        box-sizing: border-box;
+        width: 950px;
+        margin: 0 auto;
+    }
+    header div.top a.menuButton {
+        display: none;
+    }
+}
