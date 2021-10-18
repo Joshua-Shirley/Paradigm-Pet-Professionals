@@ -123,6 +123,7 @@ nav.mainMenu a:hover,
 nav.mainMenu a:active {
     background-color: var(--color-purple);
     text-decoration: underline;
+    color: var(--color-light);
 }
 
 main {

@@ -1,9 +1,15 @@
 function menuToggle() {
     var nav = document.getElementsByTagName("nav")[0];
+    var main = document.getElementsByTagName("main")[0];
+    var footer = document.getElementsByTagName("footer")[0];
     if (nav.style.display === "none") {
         nav.style.display = "block";
+        main.style.display = "none";
+        footer.style.display = "none";
     } else {
         nav.style.display = "none";
+        main.style.display = "block";
+        footer.style.display = "block";
     }
 }
 
