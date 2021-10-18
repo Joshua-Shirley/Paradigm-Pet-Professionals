@@ -12,6 +12,11 @@
     --link-active-bg: #6699cc;
     --link-visited: #003b6d;
     --link-focus: #003b6d;
+    --color-grey: #b5a1a2;
+    --color-blue: #7cbbe7;
+    --color-light: #eff4f8;
+    --color-green-yellow: #abb737;
+    --color-purple: #4b465d;
 }
 
 body {
@@ -20,109 +25,109 @@ body {
     line-height: var(--line-height);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 header,
 section,
 footer {
-    box-sizing: border-box;
     width: 100%;
 }
 
 header {
-    border-bottom: 2px solid var(--border);
-}
-
-header div.top {
-    padding: 1rem 1.5rem .25rem 1.5rem;
-    background-color: whitesmoke;
-}
-
-header div.top a.logo img {
-    max-height: 46px;
-    padding: 6px 0;
-    margin: 0 auto;
-}
-
-header div.top a.menuButton {
-    float: right;
-}
-
-header div.top a:after {
-    content: "";
-    clear: both;
-}
-
-header div.top a.menuButton:hover img {
-    filter: invert(65%) sepia(16%) saturate(1321%) hue-rotate(172deg) brightness(87%) contrast(80%);
-}
-
-nav {
     padding: 0;
-    margin: 0;
-    display: none;
+    background-color: var(--color-green-yellow);
+    border-bottom: 3px solid #8e982d;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+div.logo {
+    display: inline-block;
+    height: 80px;
+    vertical-align: middle;
+    width: 170px;
 }
 
-nav li {
+div.logo a img {
+    max-width: 100%;
+    width: 120px;
+    margin: 0.8rem 1.25rem;
+}
+
+.mobileMenuIcon {
+    display: inline-block;
+    position: absolute;
+    top: 28px;
+    right: 28px;
+}
+
+header .mobileMenuIcon span {
     display: block;
-    --background: var(--link-bg);
-    text-align: center;
+    width: 35px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: var(--color-purple);
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
 }
 
-nav a {
-    text-decoration: none;
-    display: block;
-    padding: .5rem 1.5rem;
-    color: var(--link);
-    --background-color: var(--link-bg);
-    font-weight: 400;
-    font-size: 1.35rem;
+header .mobileMenuIcon span:first-child {
+    transform-origin: 0% 0%;
 }
 
-nav a:hover,
-nav a:active {
-    background-color: #6699cc;
+header .mobileMenuIcon span:nth-last-child(2) {
+    transform-origin: 0% 100%;
 }
 
-.hamburger {
-    max-height: 50px;
+.checked span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #232323;
 }
 
-nav img.icon {
-    max-height: 24px;
-    display: block;
-    margin: 0 auto;
-    padding-bottom: .5em;
+.checked span:nth-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-nav.mainMenu {
-    display: block;
+.checked span:nth-child(2) {
+    transform: rotate(-45deg) translate(-10px, 10px);
 }
 
 nav.mainMenu ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav.mainMenu a {
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    text-decoration: none;
+    color: var(--color-purple);
+    width: 100%;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+nav.mainMenu ul li:last-of-type a {
+    padding-bottom: 2rem;
+}
+
+nav.mainMenu a:hover,
+nav.mainMenu a:active {
+    background-color: var(--color-purple);
+    text-decoration: underline;
 }
 
 main {
-    padding: 1.5rem;
-}
-
-@media screen and (max-width: 475px) {
-    body {
-        background-color: olive;
-        width: 450px;
-    }
+    display: block;
+    padding: 0.75rem 1.2rem;
 }
 
 @media screen and (min-width: 992px) {

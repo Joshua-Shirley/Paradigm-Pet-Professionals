@@ -22,6 +22,10 @@
     -->
 
     <!-- External stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/normalize.css">
     <!--
         <script src="https://kit.fontawesome.com/21e317e109.js" crossorigin="anonymous"></script>
@@ -35,63 +39,60 @@
 <body>
 
     <header>
-        <div class="top">
-            <div class="container-head">
-                <a class="logo" href="home.html">
-                    <img src="media/logo-transparent.png">
-                </a>
-
-                <a href="" class="menuButton" onclick="menuToggle(); return false;">
-                    <img class="icon hamburger" src="media/icons/bars-solid.svg" alt="menu hamburger icon">
-                </a>
-
-                <div class="container">
-                    <nav class="mainMenu" style="">
-                        <ul>
-                            <li>
-                                <a href=""><i class="fas fa-dog"></i>Dog Owners</a>
-                            </li>
-                            <li>
-                                <a href=""><i class="fas fa-cat"></i>Cat Owners</a>
-                            </li>
-                            <li>
-                                <a href=""><i class="fa-solid fa-crow"></i>Bird Owners</a>
-                            </li>
-                            <li>
-                                <a href=""><i class="fas fa-fish"></i>Fish Owners</a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fas fa-otter"></i> Small-Animal Owners
-                                </a>
-                            </li>
-                            <li class="right">
-                                <a href=" ">
-                                    <i class="fas fa-user"></i> User Profile
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+        <div class="logo">
+            <a href="home.html">
+                <img src="media/logo-transparent.png">
+            </a>
         </div>
 
-        <nav class="mobileMenu" style="display:none;">
+        <div class="mobileMenuIcon">
+            <a href="" class="menuButton" onclick="menuToggle(); hamburgerClick(); return false;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+        <nav class="mainMenu" style="display: none;">
             <ul>
-                <li><a href="">Dog Owners</a></li>
-                <li><a href="">Cat Owners</a></li>
-                <li><a href="">Bird Owners</a></li>
-                <li><a href="">Fish Owners</a></li>
-                <li><a href="">Small-Animal Owners</a></li>
-                <li class="right">
+                <li>
                     <a href="">
-                        <img class="icon" src="media/icons/user-regular.svg" alt=""> User Profile
+                        <i class="fas fa-dog"></i>
+                        <span class="text">Dog Owners</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-cat"></i>
+                        <span class="text">Cat Owners</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-crow"></i>
+                        <span class="text">Bird Owners</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-fish"></i>
+                        <span class="text">Fish Owners</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-otter"></i>
+                        <span class="text">Small-Animal Owners</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-user"></i>
+                        <span class="text">User Profile</span>
                     </a>
                 </li>
             </ul>
         </nav>
-
-
 
     </header>
 
