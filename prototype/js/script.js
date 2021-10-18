@@ -5,11 +5,9 @@ function menuToggle() {
     var body = document.getElementBy
     if (nav.style.display === "none") {
         nav.style.display = "block";
-        /*
         main.style.display = "none";
         footer.style.display = "none";
         document.body.style.backgroundColor = "#4b465d";
-        */
     } else {
         nav.style.display = "none";
         main.style.display = "block";
@@ -26,3 +24,11 @@ function hamburgerClick() {
         t.classList.add("checked");
     }
 }
+
+function updateCopyRight() {
+    var d = new Date();
+    var t = document.getElementById("copyrightYear");
+    t.innerHTML = d.getFullYear();
+}
+
+updateCopyRight();
