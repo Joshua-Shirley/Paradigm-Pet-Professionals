@@ -109,10 +109,21 @@ nav.mainMenu a {
     text-decoration: none;
     color: var(--color-purple);
     width: 100%;
-    display: block;
     padding: 0.75rem 1.25rem;
     font-weight: bold;
     font-style: italic;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+}
+
+svg.svg-inline--fa {
+    height: 2rem;
+    min-width: 60px;
+}
+
+span.text {
+    width: 100%;
 }
 
 nav.mainMenu ul li:last-of-type a {
