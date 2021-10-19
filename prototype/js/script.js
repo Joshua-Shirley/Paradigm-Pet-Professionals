@@ -30,5 +30,3 @@ function updateCopyRight() {
     var t = document.getElementById("copyrightYear");
     t.innerHTML = d.getFullYear();
 }
-
-updateCopyRight();

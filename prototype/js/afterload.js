@@ -1,0 +1,2 @@
+PrimaryMenuLinks();
+updateCopyRight();
