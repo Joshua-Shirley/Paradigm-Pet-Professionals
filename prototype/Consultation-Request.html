@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Paradigm Pet Professionals</title>
-    <meta title="" content="">
+    <title>PetExpert Consultation</title>
+    <meta title="PetExpert Consultation" content="">
     <meta name="description" content="Paradigm Pet Professionals pet care advice and consultation">
     <meta name="author" content="Paradigm Pet Professionals">
 
-    <meta property="og:title" content="Paradigm Pet Professionals">
+    <meta property="og:title" content="PetExpert Consultation">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://windsurfutah.com/">
-    <meta property="og:description" content="Paradigm Pet Professionals">
+    <meta property="og:description" content="PetExpert Consultation">
     <meta property="og:image" content="image.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,7 +94,7 @@
         <section style="margin-bottom:0;">
             <div class="container">
                 <div class="row">
-                    <h1 style="margin-top:2rem; margin-bottom:2rem;font-style: italic; font-weight:bold;">We Love Our Pets</h1>
+                    <h1>PetExpert Consultation</h1>
                 </div>
             </div>
         </section>
@@ -102,54 +102,66 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-12" style="display:flex; justify-content: stretch; align-items: flex-start; ">
-                        <p style="float: left;width: 66%;margin: 0;margin-right: 2%;font-size: 1.4rem;line-height: 2.75rem; ">
-                            Pets are nature's gift to humanity. It has been scientifically proven that opening our homes and hearts to a pet increases our longevity and improves our overall quality of life as well as the lives of our pets. At Pet Paradigm Professionals, our mission
-                            is to offer resources to help you care for your furry, scaly, feathery, and slimy loved ones. Our pet experts—or “Pexperts”—have been working with pet owners and professionals alike for the past twelve years. They offer one-on-one
-                            consultations with current and prospective pet owners as well as group presentations designed for veterinary, pet shelter, and pet breeding professionals.</p>
+                    <div class="col-12">
+                        <form>
+                            <div class="mb-3">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" aria-describedby="emailHelp" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/>
+                                <div id="emailHelp" class="form-text">Nice email.</div>
+                            </div>
 
-                        <img src="media/dark-brown-cat-laying-on-pillow-with-raised-paw.jpg " style="float:right;width:30%;margin-left:2%;margin-bottom:2%; " />
+                            <div class="mb-3">
+                                <label for="fullName">Name</label>
+                                <input type="text" name="fullName" aria-describedy="nameHelp" id="fullName" value="" placeholder="James Johnson" aria-placeholder="James Johnson" />
+                                <div id="nameHelp" class="form-text">First and Last Name</div>
+                            </div>
 
-                    </div>
-                </div>
-            </div>
-        </section>
+                            <div class="mb-3">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="text" name="phoneNumber" aria-describedby="phoneHelp" id="phoneNumber" value="" placeholder="(920) 232-3000" aria-placeholder="(920) 232-3000" />
+                                <div id="phoneHelp" class="form-text"></div>
+                            </div>
 
-        <section>
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-12 ">
-                        <p>Looking for basic pet care advice for the most common type of pets? Need additional help determining which type of pet is right for you and your family? We will work with you and provide tailored evidence-based pet care to ensure
-                            lifelong health and wellness of your new companion. </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            <div class="mb-3">
+                                <label for="petName">Pet Name</label>
+                                <input type="text" name="petName" aria-describedby="petNameHelp" id="petName" value="" placeholder="" aria-placeholder="" />
+                                <div id="petNameHelp" class="form-text"></div>
+                            </div>
 
-        <section>
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-12 ">
-                        <p>Looking for your new best friend? The following organizations can help you find and adopt the perfect companion:
-                            <ul>
-                                <li><a href="https://theshelterpetproject.org/ ">General Adoption Resources</a></li>
-                                <li><a href="https://www.aspca.org/ ">ASPCA</a></li>
-                                <li><a href="https://www.sterlingshelter.org/humane-society/koi-fish-rescue/ ">Fish Rescue</a></li>
-                                <li><a href="https://savethesnakes.org/snakerescuecall/ ">Snake Rescue</a></li>
-                                <li><a href="https://ftlob.rescuegroups.org/ ">Bird Rescue</a></li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            <div class="mb-3" style="display: flex; align-items: self-start; justify-content: space-evenly; padding: 1.5rem 0;">
 
-        <section>
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-12 ">
-                        <p>We are also happy to help you navigate the adoption process! We will guide you through each step in the process from determining which type of pet is best suited for your family and home environment, to completing the necessary
-                            paperwork, to bringing your new loved one home. Please fill out our contact form to request a consultation. We will contact you within 48 hours to schedule a consultation. All fields are required.</p>
+                                <label for="petTypeCat">Cat
+                                    <input type="radio" name="petType" value="cat" id="petTypeCat" />
+                                </label>
+
+                                <label for="petTypeDog">Dog
+                                <input type="radio" name="petType" value="dog" id="petTypeDog" />
+                                </label>
+
+                                <label for="petTypeFish">Fish
+                                <input type="radio" name="petType" value="fish" id="petTypeFish" />
+                                </label>
+
+                                <label for="petTypeBird">Bird
+                                <input type="radio" name="petType" value="bird" id="petTypeBird" />
+                                </label>
+
+                                <label for="petTypeOtter">Small Animal
+                                <input type="radio" name="petType" value="smallAnimal" id="petTypeSmallAnimal" />
+                                </label>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="petAge">Pets Age</label>
+                                <input type="number" name="petAge" aria-describedby="petAgeHelp" id="petAge" value="1" placeholder="1" aria-placeholder="1" />
+                                <div id="petAgeHelp" class="form-text"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
