@@ -74,7 +74,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <form>
+                        <form name="cta" id="cta">
                             <div class="mb-3">
                                 <label for="email">Email</label>
                                 <input type="email" name="email" id="email" placeholder="ilovecats@pets.com" aria-placeholder="ilovecats@pets.com" required/>
@@ -83,18 +83,18 @@
 
                             <div class="mb-3">
                                 <label for="firstName">First Name</label>
-                                <input type="text" name="firstName" id="firstName" value="" placeholder="James" aria-placeholder="James" required />
+                                <input type="text" name="firstName" id="firstName" value="" placeholder="James" aria-placeholder="James" pattern="[a-zA-Z ]*" required />
                                 <div class="invalid-feedback">Alphabet only - A through Z</div>
 
                                 <label for="lastName">Last Name</label>
-                                <input type="text" name="lastName" id="lastName" value="" placeholder="Johnson" aria-placeholder="Johnson" required />
+                                <input type="text" name="lastName" id="lastName" value="" placeholder="Johnson" aria-placeholder="Johnson" pattern="[a-zA-Z ]*" required />
                                 <div class="invalid-feedback">Alphabet only - A through Z</div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="phoneNumber">Phone Number</label>
-                                <input type="text" name="phoneNumber" id="phoneNumber" value="" placeholder="(920) 232-3000" aria-placeholder="(920) 232-3000" required/>
-                                <div class="invalid-feedback">Phone numbers should only contain digits</div>
+                                <input type="text" name="phoneNumber" id="phoneNumber" value="" placeholder="(920) 232-3000" aria-placeholder="(920) 232-3000" pattern="[\d()-. ]{7,20}" required/>
+                                <div class="invalid-feedback">Not a valid phone number. Phone numbers should only contain digits</div>
                             </div>
 
                             <div class="mb-3">
@@ -139,11 +139,11 @@
                                 <label for="petAge">Pets Age</label>
                                 <div class="row">
                                     <div class="input-group col-lg-6">
-                                        <input type="number" name="petAgeYears" id="petAgeYears" value="" placeholder="0" aria-placeholder="0" />
+                                        <input type="number" name="petAgeYears" id="petAgeYears" value="" placeholder="0" aria-placeholder="0" pattern="[\d]{1,2}" />
                                         <span class="input-group-text">Years</span>
                                     </div>
                                     <div class="input-group col-lg-6">
-                                        <input type="number" name="petAgeMonths" id="petAgeMonths" value="" placeholder="0" aria-placeholder="0" />
+                                        <input type="number" name="petAgeMonths" id="petAgeMonths" value="" placeholder="0" aria-placeholder="0" pattern="[\d]{1,2}" />
                                         <span class="input-group-text">Months</span>
                                     </div>
 
