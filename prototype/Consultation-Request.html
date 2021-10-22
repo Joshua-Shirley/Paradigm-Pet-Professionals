@@ -74,26 +74,31 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <form name="cta" id="cta">
+                        <form name="cta" id="cta" novalidate>
                             <div class="mb-3">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" id="email" placeholder="ilovecats@pets.com" aria-placeholder="ilovecats@pets.com" required/>
+                                <input type="email" name="email" id="email" placeholder="ilovecats@pets.com" aria-placeholder="ilovecats@pets.com" pattern="([a-zA-Z0-9!#$%&+/=?^_-{}|~.]+)([@]{1})([a-zA-Z0-9]{1})([a-zA-Z0-9-]+)([a-zA-Z0-9]{1})([.]{1})([a-zA-Z0-9]{1})([a-zA-Z0-9-]+)([a-zA-Z0-9]{1})"
+                                    value="" required/>
                                 <div class="valid-feedback">Email address validated.</div>
+                                <div class="invalid-feedback">Not a valid email address.</div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="firstName">First Name</label>
-                                <input type="text" name="firstName" id="firstName" value="" placeholder="James" aria-placeholder="James" pattern="[a-zA-Z ]*" required />
+                                <input type="text" name="firstName" id="firstName" value="" placeholder="James" aria-placeholder="James" pattern="^[a-zA-Z ,.'-]+$" required />
+                                <div class="valid-feedback">Solid name.</div>
                                 <div class="invalid-feedback">Alphabet only - A through Z</div>
-
+                            </div>
+                            <div class="mb-3">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" name="lastName" id="lastName" value="" placeholder="Johnson" aria-placeholder="Johnson" pattern="[a-zA-Z ]*" required />
+                                <input type="text" name="lastName" id="lastName" value="" placeholder="Johnson" aria-placeholder="Johnson" pattern="^[a-zA-Z ,.'-]+$" aria-invalid="false" required />
+                                <div class="valid-feedback">Solid last name.</div>
                                 <div class="invalid-feedback">Alphabet only - A through Z</div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="phoneNumber">Phone Number</label>
-                                <input type="text" name="phoneNumber" id="phoneNumber" value="" placeholder="(920) 232-3000" aria-placeholder="(920) 232-3000" pattern="[\d()-. ]{7,20}" required/>
+                                <input type="text" name="phoneNumber" id="phoneNumber" value="" placeholder="(920) 232-3000" aria-placeholder="(920) 232-3000" pattern="([\d. +()\-]{7,15})" required/>
                                 <div class="invalid-feedback">Not a valid phone number. Phone numbers should only contain digits</div>
                             </div>
 
@@ -139,11 +144,11 @@
                                 <label for="petAge">Pets Age</label>
                                 <div class="row">
                                     <div class="input-group col-lg-6">
-                                        <input type="number" name="petAgeYears" id="petAgeYears" value="" placeholder="0" aria-placeholder="0" pattern="[\d]{1,2}" />
+                                        <input type="number" name="petAgeYears" id="petAgeYears" min=0 max=99 step=1 pattern="[0-9]+" value="" placeholder="0" aria-placeholder="0" />
                                         <span class="input-group-text">Years</span>
                                     </div>
                                     <div class="input-group col-lg-6">
-                                        <input type="number" name="petAgeMonths" id="petAgeMonths" value="" placeholder="0" aria-placeholder="0" pattern="[\d]{1,2}" />
+                                        <input type="number" name="petAgeMonths" id="petAgeMonths" min=0 max=12 step=1 pattern="[0-9]+" value="" placeholder="0" aria-placeholder="0" />
                                         <span class="input-group-text">Months</span>
                                     </div>
 
@@ -221,6 +226,8 @@
     <!-- Majority of js code should go here -->
     <script src="js/script.js "></script>
     <script src="js/afterload.js"></script>
+    <script src="js/formValidation.js"></script>
+
 </body>
 
 </html>
