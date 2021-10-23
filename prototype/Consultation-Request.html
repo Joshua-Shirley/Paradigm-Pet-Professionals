@@ -78,27 +78,27 @@
                             <div class="mb-3">
                                 <label for="email">Email</label>
                                 <input type="email" name="email" id="email" placeholder="ilovecats@pets.com" aria-placeholder="ilovecats@pets.com" pattern="([a-zA-Z0-9!#$%&+/=?^_-{}|~.]+)([@]{1})([a-zA-Z0-9]{1})([a-zA-Z0-9-]+)([a-zA-Z0-9]{1})([.]{1})([a-zA-Z0-9]{1})([a-zA-Z0-9-]+)([a-zA-Z0-9]{1})"
-                                    value="" required/>
+                                    value="" class="required" required/>
                                 <div class="valid-feedback">Email address validated.</div>
                                 <div class="invalid-feedback">Not a valid email address.</div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="firstName">First Name</label>
-                                <input type="text" name="firstName" id="firstName" value="" placeholder="James" aria-placeholder="James" pattern="^[a-zA-Z ,.'-]+$" required />
+                                <input type="text" name="firstName" id="firstName" value="" placeholder="James" aria-placeholder="James" pattern="^[a-zA-Z ,.'-]+$" class="required" required />
                                 <div class="valid-feedback">Solid name.</div>
                                 <div class="invalid-feedback">Alphabet only - A through Z</div>
                             </div>
                             <div class="mb-3">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" name="lastName" id="lastName" value="" placeholder="Johnson" aria-placeholder="Johnson" pattern="^[a-zA-Z ,.'-]+$" aria-invalid="false" required />
+                                <input type="text" name="lastName" id="lastName" value="" placeholder="Johnson" aria-placeholder="Johnson" pattern="^[a-zA-Z ,.'-]+$" aria-invalid="false" class="required" required />
                                 <div class="valid-feedback">Solid last name.</div>
                                 <div class="invalid-feedback">Alphabet only - A through Z</div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="phoneNumber">Phone Number</label>
-                                <input type="text" name="phoneNumber" id="phoneNumber" value="" placeholder="(920) 232-3000" aria-placeholder="(920) 232-3000" pattern="([\d. +()\-]{7,15})" required/>
+                                <input type="text" name="phoneNumber" id="phoneNumber" value="" placeholder="(920) 232-3000" aria-placeholder="(920) 232-3000" pattern="([\d. +()\-]{7,15})" class="required" required/>
                                 <div class="invalid-feedback">Not a valid phone number. Phone numbers should only contain digits</div>
                             </div>
 
@@ -119,25 +119,29 @@
                                 </label>
 
                                 <label for="petTypeDog">
-                                <input type="radio" name="petType" value="dog" id="petTypeDog" checked/>
-                                Dog
+                                <input type="radio" name="petType" value="dog" id="petTypeDog" />
+                                    Dog
                                 </label>
 
                                 <label for="petTypeFish">
                                 <input type="radio" name="petType" value="fish" id="petTypeFish" />
-                                Fish
+                                    Fish
                                 </label>
 
                                 <label for="petTypeBird">
                                 <input type="radio" name="petType" value="bird" id="petTypeBird" />
-                                Bird
+                                    Bird
                                 </label>
 
                                 <label for="petTypeSmallAnimal">
                                 <input type="radio" name="petType" value="smallAnimal" id="petTypeSmallAnimal" />
-                                Small Animal
+                                    Small Animal
                                 </label>
 
+                                <label for="petTypeNone">
+                                    <input type="radio" name="petType" value="None" id="petTypeNone" checked />
+                                    None
+                                </label>
                             </div>
 
                             <div class="mb-3">

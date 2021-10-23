@@ -19,6 +19,8 @@ const patterns = {
     "all": "\d\w\s"
 }
 
+const log = {};
+
 function regexInput(pattern, value) {
     const regex = new RegExp(pattern, 'm');
     var valid = false;
@@ -28,22 +30,22 @@ function regexInput(pattern, value) {
     return valid;
 }
 
-function validateInput2(element) {
-    // collect element
-
-    // Input Type
-
-    // Includes a pattern
-
-    // Is the a min / max
-
+function errorObj(test, error, message) {
+    var t = {};
+    t["test"] = test;
+    t["error"] = error;
+    t["message"] = message;
+    return t;
 }
-
 
 function validateInput(element) {
     var p;
     var name = element.name;
-    console.log(element);
+    // If not required skip this element
+    if (element.required == false) {
+        return;
+    }
+
     if (name == "email") {
         p = patterns.email;
     } else if (name == "phoneNumber") {
@@ -56,7 +58,7 @@ function validateInput(element) {
         return;
     }
 
-    if (regexInput(p, value)) {
+    if (regexInput(p, element.value)) {
         element.classList.remove("invalid");
         element.classList.add("valid");
     } else {

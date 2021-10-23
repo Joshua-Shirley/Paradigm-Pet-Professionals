@@ -40,9 +40,33 @@ a:hover {
     color: var(--color-blue);
 }
 
+a.button {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+}
+
+a.button:hover {
+    text-decoration: underline;
+    box-shadow: 0 0 3px 3px #1e90ff69;
+}
+
 img {
     max-width: 100%;
     max-height: 100%;
+    width: 100%;
 }
 
 h1 {
@@ -50,6 +74,16 @@ h1 {
     margin-bottom: 2rem;
     font-style: italic;
     font-weight: bold;
+    width: 100%;
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+}
+
+span.paragraphHighlight {
+    font-size: 2rem;
 }
 
 header,
@@ -163,6 +197,28 @@ nav.mainMenu a:active {
 main {
     display: block;
     padding: 0.75rem 1.2rem;
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.cta {
+    text-align: center;
+    background-color: #eae5fb;
+    padding: .75rem;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    max-width: 500px;
+}
+
+.cta h3 {
+    margin-top: -2rem;
+    text-align: left;
+    font-size: 48px;
 }
 
 footer {
@@ -427,6 +483,15 @@ button {
     display: block;
 }
 
+.required {
+    border-color: inherit;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3e%3cpath fill='%23abb737' d='M 478.21 334.093 L 336 256 l 142.21 -78.093 c 11.795 -6.477 15.961 -21.384 9.232 -33.037 l -19.48 -33.741 c -6.728 -11.653 -21.72 -15.499 -33.227 -8.523 L 296 186.718 l 3.475 -162.204 C 299.763 11.061 288.937 0 275.48 0 h -38.96 c -13.456 0 -24.283 11.061 -23.994 24.514 L 216 186.718 L 77.265 102.607 c -11.506 -6.976 -26.499 -3.13 -33.227 8.523 l -19.48 33.741 c -6.728 11.653 -2.562 26.56 9.233 33.037 L 176 256 L 33.79 334.093 c -11.795 6.477 -15.961 21.384 -9.232 33.037 l 19.48 33.741 c 6.728 11.653 21.721 15.499 33.227 8.523 L 216 325.282 l -3.475 162.204 C 212.237 500.939 223.064 512 236.52 512 h 38.961 c 13.456 0 24.283 -11.061 23.995 -24.514 L 296 325.282 l 138.735 84.111 c 11.506 6.976 26.499 3.13 33.227 -8.523 l 19.48 -33.741 c 6.728 -11.653 2.563 -26.559 -9.232 -33.036 Z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
 .valid {
     border-color: #898f4f;
     padding-right: calc(1.5em + .75rem);
@@ -443,6 +508,24 @@ button {
     background-repeat: no-repeat;
     background-position: right calc(.375em + .1875rem) center;
     background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+#return {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+}
+
+#return a {
+    color: grey;
+    background-color: #eff4f8;
+    background-color: inherit;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' role='img' viewBox='0 0 448 512'%3E%3Cpath fill='dodgerblue' d='M0 432V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48zm355.515-140.485l-123.03-123.03c-4.686-4.686-12.284-4.686-16.971 0L92.485 291.515c-7.56 7.56-2.206 20.485 8.485 20.485h246.059c10.691 0 16.045-12.926 8.486-20.485z'/%3E%3C/svg%3E");
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
 }
 
 @media screen and (min-width: 300px) {
@@ -554,5 +637,15 @@ button {
     footer div.copyright p {
         text-align: center;
         color: #abb737;
+    }
+    ul#secondaryMenu {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+    }
+    ul#secondaryMenu a {
+        font-size: 1.4rem;
     }
 }
