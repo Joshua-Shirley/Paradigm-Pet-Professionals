@@ -20,7 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/normalize.css">
-
     <link rel="stylesheet" href="css/style.css?v=1.0">
 
     <!-- Pre Load Javascripts -->
@@ -30,7 +29,7 @@
 
 <body>
 
-    <header>
+    <header id="top">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
@@ -65,7 +64,7 @@
         <section style="margin-bottom:0;">
             <div class="container">
                 <div class="row">
-                    <h1>We Love Our Pets</h1>
+                    <h1>Evidence-based pet care advice for every pet lover</h1>
                 </div>
             </div>
         </section>
@@ -91,7 +90,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="center">
+                        <div class="centerAlign">
                             <div class="cta">
                                 <h3>Let's talk.</h3>
                                 <p>
@@ -152,7 +151,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="center">
+                        <div class="centerAlign">
                             <div class="cta">
                                 <h3>Let's talk.</h3>
                                 <p>
@@ -184,6 +183,7 @@
                     <a href="index.html ">
                         <img class="logo2 " src="media/Logo-Trans-V2.png ">
                     </a>
+
                 </div>
                 <div class="col-3 companyInfo ">
                     <div class="addressRow ">
@@ -202,6 +202,26 @@
                     </div>
                 </div>
             </div>
+            <div class="row" style="margin-top:0;">
+                <div class="col-12">
+                    <p style="color:var(--color-green-yellow);text-align:center;">Evidence-based pet care advice for every pet lover</p>
+                </div>
+            </div>
+
+            <form id="searchForm" name="search">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Search Our Content</h3>
+                        <input type="text" name="searchTerm" id="searchTerm" value="" placeholder="My cat has an extra tail. What should I do?" />
+                        <div class="valid-feedback">Pro search move.</div>
+                        <div class="invalid-feedback">really? </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn" id="consultationSubmit">Submit</button>
+                    </div>
+                </div>
+            </form>
+
             <div class="row ">
                 <div class="col-12 copyright ">
                     <p>Copyright &copy; <span id="copyrightYear">1977</span> Paradigm Pet Professionals All Rights Reserved</p>
@@ -211,7 +231,7 @@
     </footer>
 
     <div id="return">
-        <a href="#secondaryMenu"></a>
+        <a href="#top"></a>
     </div>
 
     <!-- Final Load Javascripts -->
